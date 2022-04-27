@@ -1,0 +1,33 @@
+<html>
+<body>
+
+<?php
+$cols = 100;
+$rows = 100;
+$space = 'x';
+
+echo '<table>';
+		echo '<tr>'; //new row
+        echo '<td>' .$space. '</td>'; //first col has x
+        for ($r =1; $r <= $rows; $r++){
+			echo '<td>' .$r. '</td>';   //loop 1-100 for the rest for base nums
+        }
+        echo '</tr>'; //end first row
+        
+        for ($r =1; $r <= $rows; $r++){ //loop through all rows
+
+            echo'<tr>'; //start row
+			echo '<td>' .$c. '</td>'; //col base nums
+            for ($c = 1; $c <= $cols; $c++){ //loop thru 100 cols
+            	
+                echo '<td>' .$c*$r.'</td>'; //add in multiplication
+            }
+            echo '</tr>'; //end row
+
+        }
+
+  echo'</table>'; //end table
+?>
+
+</body>
+</html>
